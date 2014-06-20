@@ -1,34 +1,18 @@
-/*
- * This file is part of Technic Launcher.
- * Copyright (C) 2013 Syndicate, LLC
- *
- * Technic Launcher is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Technic Launcher is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Technic Launcher.  If not, see <http://www.gnu.org/licenses/>.
- */
+
 package org.spoutcraft.launcher.skin.options;
 
-import net.technicpack.launchercore.install.AvailablePackList;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.install.user.UserModel;
-import net.technicpack.launchercore.mirror.MirrorStore;
-import net.technicpack.launchercore.restful.PackInfo;
-import net.technicpack.launchercore.restful.PlatformConstants;
-import net.technicpack.launchercore.restful.RestObject;
-import net.technicpack.launchercore.restful.platform.PlatformPackInfo;
-import net.technicpack.launchercore.restful.solder.SolderPackInfo;
-import net.technicpack.launchercore.util.ResourceUtils;
-import net.technicpack.launchercore.util.Utils;
-import net.technicpack.launchercore.util.ZipUtils;
+import net.titanscraft.launchercore.install.AvailablePackList;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.install.user.UserModel;
+import net.titanscraft.launchercore.mirror.MirrorStore;
+import net.titanscraft.launchercore.restful.PackInfo;
+import net.titanscraft.launchercore.restful.PlatformConstants;
+import net.titanscraft.launchercore.restful.RestObject;
+import net.titanscraft.launchercore.restful.platform.PlatformPackInfo;
+import net.titanscraft.launchercore.restful.solder.SolderPackInfo;
+import net.titanscraft.launchercore.util.ResourceUtils;
+import net.titanscraft.launchercore.util.Utils;
+import net.titanscraft.launchercore.util.ZipUtils;
 import org.spoutcraft.launcher.skin.LauncherFrame;
 import org.spoutcraft.launcher.skin.components.ImageButton;
 import org.spoutcraft.launcher.skin.components.LiteButton;

@@ -1,13 +1,13 @@
 package org.spoutcraft.launcher.skin;
 
-import net.technicpack.launchercore.auth.AuthResponse;
-import net.technicpack.launchercore.auth.AuthenticationService;
-import net.technicpack.launchercore.exception.AuthenticationNetworkFailureException;
-import net.technicpack.launchercore.install.user.IAuthListener;
-import net.technicpack.launchercore.install.user.User;
-import net.technicpack.launchercore.install.user.UserModel;
-import net.technicpack.launchercore.install.user.skins.SkinRepository;
-import net.technicpack.launchercore.util.ResourceUtils;
+import net.titanscraft.launchercore.auth.AuthResponse;
+import net.titanscraft.launchercore.auth.AuthenticationService;
+import net.titanscraft.launchercore.exception.AuthenticationNetworkFailureException;
+import net.titanscraft.launchercore.install.user.IAuthListener;
+import net.titanscraft.launchercore.install.user.User;
+import net.titanscraft.launchercore.install.user.UserModel;
+import net.titanscraft.launchercore.install.user.skins.SkinRepository;
+import net.titanscraft.launchercore.util.ResourceUtils;
 import org.spoutcraft.launcher.skin.components.*;
 
 import javax.swing.*;
@@ -17,7 +17,7 @@ import java.awt.event.*;
 import java.util.Collection;
 import java.util.Locale;
 
-import static net.technicpack.launchercore.util.ResourceUtils.getResourceAsStream;
+import static net.titanscraft.launchercore.util.ResourceUtils.getResourceAsStream;
 
 public class LoginFrame extends JFrame implements KeyListener, ActionListener, MouseListener, MouseMotionListener, IAuthListener {
     public static final Color CHARCOAL = new Color(45, 45, 45);

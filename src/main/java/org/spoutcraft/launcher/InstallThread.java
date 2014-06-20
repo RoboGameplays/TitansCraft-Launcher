@@ -1,36 +1,19 @@
-/*
- * This file is part of Technic Launcher.
- * Copyright (C) 2013 Syndicate, LLC
- *
- * Technic Launcher is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Technic Launcher is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Technic Launcher.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 package org.spoutcraft.launcher;
 
-import net.technicpack.launchercore.exception.BuildInaccessibleException;
-import net.technicpack.launchercore.exception.CacheDeleteException;
-import net.technicpack.launchercore.exception.DownloadException;
-import net.technicpack.launchercore.exception.PackNotAvailableOfflineException;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.install.ModpackInstaller;
-import net.technicpack.launchercore.install.user.UserModel;
-import net.technicpack.launchercore.launch.LaunchOptions;
-import net.technicpack.launchercore.launch.MinecraftLauncher;
-import net.technicpack.launchercore.minecraft.CompleteVersion;
-import net.technicpack.launchercore.mirror.MirrorStore;
-import net.technicpack.launchercore.util.LaunchAction;
-import net.technicpack.launchercore.util.Settings;
+import net.titanscraft.launchercore.exception.BuildInaccessibleException;
+import net.titanscraft.launchercore.exception.CacheDeleteException;
+import net.titanscraft.launchercore.exception.DownloadException;
+import net.titanscraft.launchercore.exception.PackNotAvailableOfflineException;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.install.ModpackInstaller;
+import net.titanscraft.launchercore.install.user.UserModel;
+import net.titanscraft.launchercore.launch.LaunchOptions;
+import net.titanscraft.launchercore.launch.MinecraftLauncher;
+import net.titanscraft.launchercore.minecraft.CompleteVersion;
+import net.titanscraft.launchercore.mirror.MirrorStore;
+import net.titanscraft.launchercore.util.LaunchAction;
+import net.titanscraft.launchercore.util.Settings;
 import org.spoutcraft.launcher.entrypoint.SpoutcraftLauncher;
 import org.spoutcraft.launcher.launcher.Launcher;
 

@@ -1,26 +1,9 @@
-/*
- * This file is part of Technic Launcher.
- * Copyright (C) 2013 Syndicate, LLC
- *
- * Technic Launcher is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Technic Launcher is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Technic Launcher.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 package org.spoutcraft.launcher.skin.components;
 
-import net.technicpack.launchercore.install.AddPack;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.util.ResourceUtils;
+import net.titanscraft.launchercore.install.AddPack;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.util.ResourceUtils;
 import org.spoutcraft.launcher.skin.LauncherFrame;
 
 import javax.imageio.ImageIO;

@@ -1,34 +1,17 @@
-/*
- * This file is part of Technic Launcher.
- * Copyright (C) 2013 Syndicate, LLC
- *
- * Technic Launcher is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Technic Launcher is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Technic Launcher.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 package org.spoutcraft.launcher.skin;
 
-import net.technicpack.launchercore.install.AvailablePackList;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.install.user.IAuthListener;
-import net.technicpack.launchercore.install.user.User;
-import net.technicpack.launchercore.install.user.UserModel;
-import net.technicpack.launchercore.install.user.skins.ISkinListener;
-import net.technicpack.launchercore.install.user.skins.SkinRepository;
-import net.technicpack.launchercore.mirror.MirrorStore;
-import net.technicpack.launchercore.util.DownloadListener;
-import net.technicpack.launchercore.util.ImageUtils;
-import net.technicpack.launchercore.util.ResourceUtils;
+import net.titanscraft.launchercore.install.AvailablePackList;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.install.user.IAuthListener;
+import net.titanscraft.launchercore.install.user.User;
+import net.titanscraft.launchercore.install.user.UserModel;
+import net.titanscraft.launchercore.install.user.skins.ISkinListener;
+import net.titanscraft.launchercore.install.user.skins.SkinRepository;
+import net.titanscraft.launchercore.mirror.MirrorStore;
+import net.titanscraft.launchercore.util.DownloadListener;
+import net.titanscraft.launchercore.util.ImageUtils;
+import net.titanscraft.launchercore.util.ResourceUtils;
 import org.spoutcraft.launcher.donor.DonorSite;
 import org.spoutcraft.launcher.launcher.Launcher;
 import org.spoutcraft.launcher.skin.components.*;
@@ -42,7 +25,7 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.net.URL;
 
-import static net.technicpack.launchercore.util.ResourceUtils.getResourceAsStream;
+import static net.titanscraft.launchercore.util.ResourceUtils.getResourceAsStream;
 
 public class LauncherFrame extends JFrame implements ActionListener, KeyListener, MouseWheelListener, DownloadListener, ISkinListener, IAuthListener {
     public static final Color TRANSPARENT = new Color(45, 45, 45, 160);
