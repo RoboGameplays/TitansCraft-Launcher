@@ -1,9 +1,9 @@
 package org.spoutcraft.launcher.launcher;
 
-import net.technicpack.launchercore.install.user.User;
-import net.technicpack.launchercore.install.user.skins.ISkinMapper;
-import net.technicpack.launchercore.util.ResourceUtils;
-import net.technicpack.launchercore.util.Utils;
+import net.titanscraft.launchercore.install.user.User;
+import net.titanscraft.launchercore.install.user.skins.ISkinMapper;
+import net.titanscraft.launchercore.util.ResourceUtils;
+import net.titanscraft.launchercore.util.Utils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

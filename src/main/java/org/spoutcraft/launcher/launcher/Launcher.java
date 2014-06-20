@@ -18,17 +18,17 @@
 
 package org.spoutcraft.launcher.launcher;
 
-import net.technicpack.launchercore.exception.AuthenticationNetworkFailureException;
-import net.technicpack.launchercore.install.AvailablePackList;
-import net.technicpack.launchercore.install.IPackStore;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.install.user.User;
-import net.technicpack.launchercore.install.user.UserModel;
-import net.technicpack.launchercore.install.user.skins.MinotarSkinStore;
-import net.technicpack.launchercore.install.user.skins.SkinRepository;
-import net.technicpack.launchercore.mirror.MirrorStore;
-import net.technicpack.launchercore.mirror.secure.rest.JsonWebSecureMirror;
-import net.technicpack.launchercore.util.Utils;
+import net.titanscraft.launchercore.exception.AuthenticationNetworkFailureException;
+import net.titanscraft.launchercore.install.AvailablePackList;
+import net.titanscraft.launchercore.install.IPackStore;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.install.user.User;
+import net.titanscraft.launchercore.install.user.UserModel;
+import net.titanscraft.launchercore.install.user.skins.MinotarSkinStore;
+import net.titanscraft.launchercore.install.user.skins.SkinRepository;
+import net.titanscraft.launchercore.mirror.MirrorStore;
+import net.titanscraft.launchercore.mirror.secure.rest.JsonWebSecureMirror;
+import net.titanscraft.launchercore.util.Utils;
 import org.spoutcraft.launcher.InstallThread;
 import org.spoutcraft.launcher.donor.DonorSite;
 import org.spoutcraft.launcher.entrypoint.SpoutcraftLauncher;

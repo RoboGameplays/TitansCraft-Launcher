@@ -1,9 +1,9 @@
 package org.spoutcraft.launcher.launcher;
 
 import com.google.gson.JsonSyntaxException;
-import net.technicpack.launchercore.install.user.IUserStore;
-import net.technicpack.launchercore.install.user.User;
-import net.technicpack.launchercore.util.Utils;
+import net.titanscraft.launchercore.install.user.IUserStore;
+import net.titanscraft.launchercore.install.user.User;
+import net.titanscraft.launchercore.util.Utils;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

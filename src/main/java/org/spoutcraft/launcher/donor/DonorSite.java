@@ -1,7 +1,7 @@
 package org.spoutcraft.launcher.donor;
 
-import net.technicpack.launchercore.exception.RestfulAPIException;
-import net.technicpack.launchercore.restful.RestObject;
+import net.titanscraft.launchercore.exception.RestfulAPIException;
+import net.titanscraft.launchercore.restful.RestObject;
 
 import java.util.Dictionary;
 import java.util.Hashtable;

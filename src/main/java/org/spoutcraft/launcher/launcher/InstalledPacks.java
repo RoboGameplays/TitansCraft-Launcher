@@ -20,11 +20,11 @@
 package org.spoutcraft.launcher.launcher;
 
 import com.google.gson.JsonSyntaxException;
-import net.technicpack.launchercore.install.AddPack;
-import net.technicpack.launchercore.install.IPackStore;
-import net.technicpack.launchercore.install.InstalledPack;
-import net.technicpack.launchercore.mirror.MirrorStore;
-import net.technicpack.launchercore.util.Utils;
+import net.titanscraft.launchercore.install.AddPack;
+import net.titanscraft.launchercore.install.IPackStore;
+import net.titanscraft.launchercore.install.InstalledPack;
+import net.titanscraft.launchercore.mirror.MirrorStore;
+import net.titanscraft.launchercore.util.Utils;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
