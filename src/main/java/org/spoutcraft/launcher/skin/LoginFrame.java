@@ -167,20 +167,20 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         dash = new JLabel("-");
         dash.setFont(verySmallFont);
         dash.setForeground(Color.white);
-        dash.setBounds((FRAME_WIDTH / 2) - 2, 375, 20, 20);
+        dash.setBounds((FRAME_WIDTH / 2) - 2, 375, 30, 30);
 
         //Terms of Service
         tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
-        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 25);
+        tosLink.setBounds(dash.getX() - 108, dash.getY(), 108, 30);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
         privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
-        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 25);
+        privacyPolicy.setBounds(dash.getX() + 13, dash.getY(), 88, 30);
         privacyPolicy.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Close button
