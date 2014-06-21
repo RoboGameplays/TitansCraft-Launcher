@@ -88,7 +88,7 @@ public class LauncherDirectories extends Directories {
     }
 
     public File selectInstallDir(File workDir) {
-        int result = JOptionPane.showConfirmDialog(splash, "O launcher nao esta instalado. \n\nE sera instalado no: \n" + workDir.getAbsolutePath() + " \n\nWould you like to change the install directory?", "Install Technic Launcher", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+        int result = JOptionPane.showConfirmDialog(splash, "O launcher nao esta instalado. \n\nE sera instalado no: \n" + workDir.getAbsolutePath() + " \n\nVocê gostaria de mudar o lugar de instalação?", "Innstalação TitansCraft Laucher", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
         if (result == JOptionPane.YES_OPTION) {
             JFileChooser fileChooser = new JFileChooser(workDir);
             fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
