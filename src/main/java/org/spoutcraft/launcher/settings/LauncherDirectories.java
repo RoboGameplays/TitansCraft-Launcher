@@ -26,7 +26,7 @@ public class LauncherDirectories extends Directories {
 
     public File getSettingsDirectory() {
         if (settingsDir == null) {
-            settingsDir = setupSettingsDir("technic");
+            settingsDir = setupSettingsDir("titanscraft");
         }
         return settingsDir;
     }
@@ -51,7 +51,7 @@ public class LauncherDirectories extends Directories {
         workDir = getSettingsDirectory();
         boolean exists = workDir.exists();
         if (!exists && !workDir.mkdirs()) {
-            throw new RuntimeException("The working directory could not be created: " + workDir);
+            throw new RuntimeException("A pasta de trabalho nao pode ser criada: " + workDir);
         }
 
         Settings.load();
@@ -88,7 +88,7 @@ public class LauncherDirectories extends Directories {
     }
 
     public File selectInstallDir(File workDir) {
-        int result = JOptionPane.showConfirmDialog(splash, "No installation of technic found. \n\nTechnic Launcher will install at: \n" + workDir.getAbsolutePath() + " \n\nWould you like to change the install directory?", "Install Technic Launcher", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+        int result = JOptionPane.showConfirmDialog(splash, "O launcher nao esta instalado. \n\nE sera instalado no: \n" + workDir.getAbsolutePath() + " \n\nWould you like to change the install directory?", "Install Technic Launcher", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
         if (result == JOptionPane.YES_OPTION) {
             JFileChooser fileChooser = new JFileChooser(workDir);
             fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
