@@ -92,8 +92,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
 
         //Logo at the top
         platformImage = new JLabel();
-        LauncherFrame.setIcon(platformImage, "platform_logo.png", 305, 56);
-        platformImage.setBounds(21, 21, 305, 56);
+        LauncherFrame.setIcon(platformImage, "platform_logo.png", 350, 56);
+        platformImage.setBounds(21, 21, 350, 56);
 
         instructionText = new JLabel("Faça login com sua conta do Minecraft");
         instructionText.setFont(smallFont);
@@ -112,7 +112,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
             nameSelect.setUI(new MetalComboBoxUI());
         }
 
-        nameSelect.setBounds(25, 140, 297, 32);
+        nameSelect.setBounds(25, 140, 305, 32);
         nameSelect.setFont(largeFont);
         nameSelect.setEditable(true);
         nameSelect.setVisible(false);
@@ -125,7 +125,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         nameSelect.setActionCommand(CHANGE_USER);
 
         name = new JTextField();
-        name.setBounds(25, 140, 297, 30);
+        name.setBounds(25, 140, 305, 30);
         name.setFont(largeFont);
         name.addKeyListener(this);
 
@@ -136,7 +136,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
 
         // Setup password box
         pass = new JPasswordField();
-        pass.setBounds(25, 205, 297, 30);
+        pass.setBounds(25, 205, 305, 30);
         pass.setFont(largeFont);
         pass.addKeyListener(this);
         pass.setEchoChar('*');
@@ -148,7 +148,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         rememberAccount.setFont(smallFont);
         rememberAccount.setForeground(Color.white);
         rememberAccount.setOpaque(false);
-        rememberAccount.setBounds(25, 245, 300, 30);
+        rememberAccount.setBounds(25, 245, 342, 30);
         rememberAccount.setHorizontalTextPosition(SwingConstants.LEFT);
         rememberAccount.setHorizontalAlignment(SwingConstants.RIGHT);
         rememberAccount.setIconTextGap(12);
@@ -173,14 +173,14 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
-        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 20);
+        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 25);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
         privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
-        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 20);
+        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 25);
         privacyPolicy.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Close button
