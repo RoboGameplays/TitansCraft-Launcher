@@ -241,7 +241,7 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         exit.setActionCommand(EXIT_ACTION);
         exit.addActionListener(this);
         
-        //Tirar depois
+        //Mudar quando necessario
         // Steam button
         /*JButton steam = new ImageHyperlinkButton("http://steamcommunity.com/groups/technic-pack");
         steam.setRolloverIcon(ResourceUtils.getIcon("steamInverted.png", 28, 28));
@@ -300,10 +300,11 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         contentPane.add(platform);
         contentPane.add(packSelector);
         contentPane.add(selectorBackground);
-        contentPane.add(steam);
-        contentPane.add(twitter);
-        contentPane.add(facebook);
-        contentPane.add(youtube);
+   //remover comentario de cima primeiro
+//        contentPane.add(steam);
+//        contentPane.add(twitter);
+//        contentPane.add(facebook);
+//        contentPane.add(youtube);
         contentPane.add(browse);
         contentPane.add(forums);
         contentPane.add(donate);
