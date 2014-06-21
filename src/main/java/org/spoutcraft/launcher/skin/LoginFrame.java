@@ -48,8 +48,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
     private SkinRepository mSkinRepo;
     private UserModel mUserModel;
 
-    private static final int FRAME_WIDTH = 347;
-    private static final int FRAME_HEIGHT = 411;
+    private static final int FRAME_WIDTH = 450;
+    private static final int FRAME_HEIGHT = 520;
 
     private static final String CLOSE_ACTION = "close";
     private static final String LOGIN_ACTION = "login";
@@ -95,7 +95,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         LauncherFrame.setIcon(platformImage, "platform_logo.png", 305, 56);
         platformImage.setBounds(21, 21, 305, 56);
 
-        instructionText = new JLabel("Por favor faça login com sua conta do Minecraft");
+        instructionText = new JLabel("Faça login com sua conta do Minecraft");
         instructionText.setFont(smallFont);
         instructionText.setBounds(28, 80, FRAME_WIDTH - 50, 30);
         instructionText.setForeground(Color.white);
@@ -144,7 +144,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         pass.setActionCommand(LOGIN_ACTION);
 
         // "Remember this account"
-        rememberAccount = new JCheckBox("Lembrar esta conta", false);
+        rememberAccount = new JCheckBox("Lembre esta conta", false);
         rememberAccount.setFont(smallFont);
         rememberAccount.setForeground(Color.white);
         rememberAccount.setOpaque(false);
@@ -275,7 +275,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
             return;
         }
 
-        pass.setText("PASSWORD");
+        pass.setText("SENHA");
         pass.setEditable(false);
         pass.setBackground(Color.lightGray);
         rememberAccount.setSelected(true);
@@ -372,8 +372,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
             //Go ahead and just play offline automatically, like the minecraft client does.  If we're running loud (user
             //is actually at the login UI clicking the login button), give them a choice.
             if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this,
-                    "The auth servers at Minecraft.net are inaccessible.  Would you like to play offline?",
-                    "Offline Play", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE)) {
+                    "Os servidores Minecraft.net estão inacessivel.  Vovê gostaria de jogar offline?",
+                    "Jogar Offline", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE)) {
 
                 //This is the last time we'll have access to the user's real username, so we should set the last-used
                 //username now
@@ -417,7 +417,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
             response = AuthenticationService.requestLogin(username, new String(this.pass.getPassword()), mUserModel.getClientToken());
 
             if (response == null) {
-                JOptionPane.showMessageDialog(this, "Invalid credentials. Invalid username or password.", "Auth Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Credencias invalidas. Nome de usuario ou senha estão incorretos.", "Erro de Autenticação", JOptionPane.ERROR_MESSAGE);
                 return;
             } else if (response.getError() != null) {
                 JOptionPane.showMessageDialog(this, response.getErrorMessage(), response.getError(), JOptionPane.ERROR_MESSAGE);
@@ -426,7 +426,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         } catch (AuthenticationNetworkFailureException ex) {
             //Login servers are inaccessible, but we only give the option to play offline with pre-cached users
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, "An error occurred while attempting to reach Minecraft.net", "Auth Servers Inaccessible", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Um erro ocorreu ao tentar se comunicar com os servidores do Minecraft.net", "Servidores de autenticação invados", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
