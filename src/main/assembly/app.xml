@@ -5,14 +5,14 @@
     <formats>
         <format>zip</format>
     </formats>
-    <baseDirectory>Technic.app</baseDirectory>
+    <baseDirectory>TitansCraft.app</baseDirectory>
 
     <dependencySets>
         <dependencySet>
             <directoryMode>755</directoryMode>
             <fileMode>644</fileMode>
             <outputDirectory>/Contents/Java</outputDirectory>
-            <outputFileNameMapping>TechnicLauncher.jar</outputFileNameMapping>
+            <outputFileNameMapping>TitansCraft.jar</outputFileNameMapping>
             <unpack>false</unpack>
             <useTransitiveDependencies>false</useTransitiveDependencies>
             <includes>

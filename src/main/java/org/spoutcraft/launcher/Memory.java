@@ -39,6 +39,10 @@ public final class Memory {
             (new Memory(14336, "14 GB", 16)),
             (new Memory(15360, "15 GB", 17)),
             (new Memory(16384, "16 GB", 18)),
+            (new Memory(24576, "24 GB", 18)),//24576
+            (new Memory(32768, "32 GB", 18)),
+            (new Memory(65536, "64 GB", 18)),
+            (new Memory(131072, "128 GB", 18)),
     };
     public static final Memory DEFAULT_MEM = memoryOptions[2];
     public static final int MAX_32_BIT_MEMORY = 1024;

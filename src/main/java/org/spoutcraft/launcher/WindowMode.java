@@ -4,9 +4,9 @@ package org.spoutcraft.launcher;
 import java.awt.*;
 
 public enum WindowMode {
-    WINDOWED("Windowed", 0),
-    FULL_SCREEN("Full Screen", 1),
-    MAXIMIZED("Maximized", 2);
+    WINDOWED("Modo Janela", 0),
+    FULL_SCREEN("Tela Cheia", 1),
+    MAXIMIZED("Maximizado", 2);
 
     private static final int DEFAULT_WINDOW_HEIGHT = 540;
     private static final int DEFAULT_WINDOW_WIDTH = 900;
@@ -61,7 +61,7 @@ public enum WindowMode {
                 bounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
                 return new Point(bounds.x, bounds.y);
             default:
-                throw new IllegalArgumentException("Unknown windowmode");
+                throw new IllegalArgumentException("Modo Janela desconhecido");
         }
     }
 
@@ -71,6 +71,6 @@ public enum WindowMode {
                 return m;
             }
         }
-        throw new IllegalArgumentException("No window mode matching " + id);
+        throw new IllegalArgumentException("Nenhum modo janela encontrado " + id);
     }
 }

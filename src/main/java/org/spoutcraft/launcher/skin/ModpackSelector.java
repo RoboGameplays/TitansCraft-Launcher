@@ -121,7 +121,7 @@ public class ModpackSelector extends JComponent implements ActionListener, IPack
         buttons.get(3).setPack(selected);
 
         // Set the URL for the platform button
-        String url = "http://www.technicpack.net/modpack/details/" + packName;
+        String url = "http://www.titanscraft.net/modpack/details/" + packName;
         if (selected.getInfo() instanceof SolderPackInfo && !custom) {
             String newUrl = selected.getInfo().getUrl();
             if (newUrl != null && !newUrl.isEmpty()) {

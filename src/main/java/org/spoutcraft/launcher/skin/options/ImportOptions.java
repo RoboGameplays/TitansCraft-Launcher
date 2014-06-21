@@ -67,7 +67,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
         this.mUserModel = userModel;
         this.mirrorStore = mirrorStore;
 
-        setTitle("Add a Pack");
+        setTitle("Adicionar Modpack");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
         addMouseListener(this);
         addMouseMotionListener(this);
@@ -107,17 +107,17 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
 
         msgLabel = new JLabel();
         msgLabel.setBounds(10, 75, FRAME_WIDTH - 20, 25);
-        msgLabel.setText("Enter your Technic Platform delivery URL below to add a new pack:");
+        msgLabel.setText("Coloque a URL do Modpack a baixo:");
         msgLabel.setForeground(Color.white);
         msgLabel.setFont(minecraft);
 
-        urlTextBox = new LiteTextBox(this, "Paste Platform URL Here");
+        urlTextBox = new LiteTextBox(this, "Coloque a URL do Modpack aqui");
         urlTextBox.setBounds(10, msgLabel.getY() + msgLabel.getHeight() + 5, FRAME_WIDTH - 115, 30);
         urlTextBox.setFont(minecraft);
         urlTextBox.getDocument().addDocumentListener(this);
         urlDoc = urlTextBox.getDocument();
 
-        save = new LiteButton("Add Modpack");
+        save = new LiteButton("Adicionar Modpack");
         save.setFont(minecraft.deriveFont(14F));
         save.setBounds(FRAME_WIDTH - 145, FRAME_HEIGHT - 40, 135, 30);
         save.setActionCommand(IMPORT_ACTION);
@@ -126,13 +126,13 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
         fileChooser = new JFileChooser(Utils.getLauncherDirectory());
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
-        folder = new LiteButton("Change Folder");
+        folder = new LiteButton("Mudar Pasta");
         folder.setFont(minecraft.deriveFont(14F));
         folder.setBounds(FRAME_WIDTH - 290, FRAME_HEIGHT - 40, 135, 30);
         folder.setActionCommand(CHANGE_FOLDER);
         folder.addActionListener(this);
 
-        paste = new LiteButton("Paste");
+        paste = new LiteButton("Colar");
         paste.setFont(minecraft.deriveFont(14F));
         paste.setBounds(FRAME_WIDTH - 95, msgLabel.getY() + msgLabel.getHeight() + 5, 85, 30);
         paste.setActionCommand(PASTE_URL);
@@ -178,18 +178,18 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
                 File file = fileChooser.getSelectedFile();
 
                 if (!ZipUtils.checkEmpty(file)) {
-                    install.setText("Please select an empty directory.");
+                    install.setText("Por favor use uma pasta vazia.");
                     return;
                 }
 
                 if (info.shouldForceDirectory() && file.getAbsolutePath().startsWith(Utils.getSettingsDirectory().getAbsolutePath())) {
-                    install.setText("This pack requires a directory outside of " + Utils.getSettingsDirectory().getAbsolutePath());
+                    install.setText("Este pacote requer um diretório fora da " + Utils.getSettingsDirectory().getAbsolutePath());
                     return;
                 }
                 installDir = file;
 
-                install.setText("Location: " + installDir.getPath());
-                folder.setText("Change Folder");
+                install.setText("Localização: " + installDir.getPath());
+                folder.setText("Mudar Pasta");
                 folder.setLocation(FRAME_WIDTH - 290, FRAME_HEIGHT - 40);
                 enableComponent(save, true);
             }
@@ -227,7 +227,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
             final String url = doc.getText(0, doc.getLength()).trim();
 
             if (url.isEmpty()) {
-                msgLabel.setText("Enter your Technic Platform delivery URL below to add a new pack:");
+                msgLabel.setText("Coloque a URL da plataforma TitansCraft");
                 enableComponent(save, false);
                 enableComponent(folder, false);
                 enableComponent(install, false);
@@ -237,7 +237,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
             }
 
             if (matchUrl(url)) {
-                msgLabel.setText("Attempting to fetch Modpack info...");
+                msgLabel.setText("Tentando encontrar informações do Modpack...");
                 // Turn everything off while the data is being fetched
                 enableComponent(urlTextBox, false);
                 enableComponent(paste, false);
@@ -257,7 +257,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
                         try {
                             PlatformPackInfo result = get();
                             if (!result.hasSolder() && !(result.getUrl().startsWith("http://") || result.getUrl().startsWith("https://"))) {
-                                msgLabel.setText("Modpack has invalid download link. Consult modpack author.");
+                                msgLabel.setText("Link de download do modpack invalido, procure informar esse erro ao dono do modpack.");
                                 return;
                             } else {
                                 if (result.hasSolder()) {
@@ -272,17 +272,17 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
                             enableComponent(folder, true);
                             enableComponent(install, true);
                             if (info.shouldForceDirectory()) {
-                                install.setText("This pack requires a directory outside of " + Utils.getSettingsDirectory().getAbsolutePath());
-                                folder.setText("Select");
+                                install.setText("Este pacote requer um diretório fora da " + Utils.getSettingsDirectory().getAbsolutePath());
+                                folder.setText("Selecionar");
                                 folder.setLocation(FRAME_WIDTH - 145, FRAME_HEIGHT - 40);
                                 enableComponent(save, false);
                             } else {
                                 installDir = new File(Utils.getLauncherDirectory(), info.getName());
-                                install.setText("Location: " + installDir.getPath());
+                                install.setText("Localização: " + installDir.getPath());
                                 enableComponent(save, true);
                             }
                         } catch (ExecutionException e) {
-                            msgLabel.setText("Error parsing platform response");
+                            msgLabel.setText("Resposta da plataforma a análise de erros");
                             enableComponent(save, false);
                             enableComponent(folder, false);
                             enableComponent(install, false);
@@ -294,7 +294,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
                             e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
-                            msgLabel.setText("Modpack has invalid solder link. Consult modpack author.");
+                            msgLabel.setText("Modpack tem Link solder inválido. Consulte autor do modpack.");
                         } finally {
                             // always turn these back on
                             enableComponent(urlTextBox, true);
@@ -304,7 +304,7 @@ public class ImportOptions extends JDialog implements ActionListener, MouseListe
                 };
                 worker.execute();
             } else {
-                msgLabel.setText("Invalid Technic Platform delivery URL");
+                msgLabel.setText("URL fornecido pela Plataforma TitansCraft é inválido");
                 enableComponent(save, false);
                 enableComponent(folder, false);
                 enableComponent(install, false);

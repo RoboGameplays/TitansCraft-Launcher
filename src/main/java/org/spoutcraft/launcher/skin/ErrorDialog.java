@@ -17,8 +17,8 @@ import java.net.URL;
 
 public class ErrorDialog extends JDialog implements ActionListener {
     private static final URL technicIcon = ErrorDialog.class.getResource("/org/spoutcraft/launcher/resources/icon.png");
-    private static final String CLOSE_ACTION = "close";
-    private static final String REPORT_ACTION = "report";
+    private static final String CLOSE_ACTION = "fechar";
+    private static final String REPORT_ACTION = "reportar";
     private static final String PASTEBIN_URL = "http://pastebin.com";
     private static final long serialVersionUID = 1L;
     private final Throwable cause;
@@ -56,7 +56,7 @@ public class ErrorDialog extends JDialog implements ActionListener {
     private void populateException(Throwable e) {
         StringBuilder builder = new StringBuilder();
 
-        builder.append("( Please submit this report to https://github.com/TechnicPack/TechnicLauncher/issues )\n");
+        builder.append("( Por favor reporte o erro nesta pagina https://github.com/RoboGameplays/TitansCraft-Launcher/issues )\n");
         builder.append("    Launcher Build: ").append(SpoutcraftLauncher.getLauncherBuild()).append("\n");
         builder.append("    Selected Pack: ").append(selected).append("\n");
         builder.append("Stack Trace:").append("\n");
@@ -203,7 +203,7 @@ public class ErrorDialog extends JDialog implements ActionListener {
 
     private String generateExceptionReport() {
         StringBuilder builder = new StringBuilder("Technic Launcher Error Report:\n");
-        builder.append("( Please submit this report to https://github.com/TechnicPack/TechnicLauncher/issues )\n");
+        builder.append("( Please submit this report to https://github.com/RoboGameplays/TitansCraft-Launcher/issues )\n");
         builder.append("    Launcher Build: ").append(SpoutcraftLauncher.getLauncherBuild()).append("\n").append("\n");
         builder.append("    Selected Pack: ").append(selected).append("\n");
         builder.append("Stack Trace:").append("\n");

@@ -50,7 +50,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
     private String buildStream = "stable";
 
     public LauncherOptions() {
-        setTitle("Launcher Options");
+        setTitle("Opções do Launcher");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
         addMouseListener(this);
         addMouseMotionListener(this);
@@ -85,7 +85,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         optionsQuit.setActionCommand(QUIT_ACTION);
         optionsQuit.addActionListener(this);
 
-        JLabel title = new JLabel("Launcher Options");
+        JLabel title = new JLabel("Opções do Launcher");
         title.setFont(minecraft.deriveFont(14F));
         title.setBounds(50, 10, 200, 20);
         title.setForeground(Color.WHITE);
@@ -98,7 +98,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
 
         ButtonGroup group = new ButtonGroup();
 
-        stable = new JRadioButton("Always use Stable Launcher Builds");
+        stable = new JRadioButton("Sempre usar a versão estavel do launcher");
         stable.setBounds(10, build.getY() + build.getHeight() + 10, FRAME_WIDTH - 20, 20);
         stable.setFont(minecraft);
         stable.setForeground(Color.WHITE);
@@ -110,7 +110,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         stable.addActionListener(this);
         group.add(stable);
 
-        beta = new JRadioButton("Always use Beta Launcher Builds");
+        beta = new JRadioButton("Sempre usar a versão Beta do launcher");
         beta.setBounds(10, stable.getY() + stable.getHeight() + 10, FRAME_WIDTH - 20, 20);
         beta.setFont(minecraft);
         beta.setForeground(Color.WHITE);
@@ -128,7 +128,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
             beta.setSelected(true);
         }
 
-        JLabel memoryLabel = new JLabel("Memory: ");
+        JLabel memoryLabel = new JLabel("Memoria: ");
         memoryLabel.setFont(minecraft);
         memoryLabel.setBounds(10, beta.getY() + beta.getHeight() + 10, 65, 20);
         memoryLabel.setForeground(Color.WHITE);
@@ -138,7 +138,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         memory.setBounds(memoryLabel.getX() + memoryLabel.getWidth() + 10, memoryLabel.getY(), 100, 20);
         populateMemory(memory);
 
-        JLabel onLaunchLabel = new JLabel("On Pack Launch: ");
+        JLabel onLaunchLabel = new JLabel("Ao modpack abrir: ");
         onLaunchLabel.setFont(minecraft);
         onLaunchLabel.setBounds(10, memoryLabel.getY() + memoryLabel.getHeight() + 10, 125, 20);
         onLaunchLabel.setForeground(Color.WHITE);
@@ -156,7 +156,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         packLocation.setText(installedDirectory);
         packLocation.setEnabled(false);
 
-        LiteButton changeFolder = new LiteButton("Change Folder");
+        LiteButton changeFolder = new LiteButton("Mudar pasta");
         changeFolder.setBounds(FRAME_WIDTH / 2 + 5, packLocation.getY() + packLocation.getHeight() + 10, FRAME_WIDTH / 2 - 15, 25);
         changeFolder.setFont(minecraft);
         changeFolder.setActionCommand(CHANGEFOLDER_ACTION);
@@ -170,14 +170,14 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         logs.setActionCommand(LOGS_ACTION);
         logs.addActionListener(this);
 
-        LiteButton save = new LiteButton("Save");
+        LiteButton save = new LiteButton("Salvar");
         save.setFont(minecraft.deriveFont(14F));
         save.setBounds(FRAME_WIDTH / 2 + 5, logs.getY() + logs.getHeight() + 10, FRAME_WIDTH / 2 - 15, 25);
         save.setActionCommand(SAVE_ACTION);
         save.addActionListener(this);
 
         consoleToggle = Settings.getShowConsole();
-        console = new LiteButton(consoleToggle ? "Hide Console" : "Show Console");
+        console = new LiteButton(consoleToggle ? "Esconder Console" : "Exiber Console");
         console.setFont(minecraft.deriveFont(14F));
         console.setBounds(10, logs.getY() + logs.getHeight() + 10, FRAME_WIDTH / 2 - 15, 25);
         console.setForeground(Color.WHITE);
@@ -233,7 +233,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         if (!bit64) {
             maxMemory = Math.min(Memory.MAX_32_BIT_MEMORY, maxMemory);
         }
-        System.out.println("Maximum usable memory detected: " + maxMemory + " mb");
+        System.out.println("Máximo de memória utilizável detectado: " + maxMemory + " mb");
 
         for (Memory mem : Memory.memoryOptions) {
             if (maxMemory >= mem.getMemoryMB()) {
@@ -312,7 +312,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
             } else {
                 SpoutcraftLauncher.destroyConsole();
             }
-            console.setText(consoleToggle ? "Hide Console" : "Show Console");
+            console.setText(consoleToggle ? "Esconder Console" : "Exibir Console");
         } else if (action.equals(CHANGEFOLDER_ACTION)) {
             int result = fileChooser.showOpenDialog(this);
 

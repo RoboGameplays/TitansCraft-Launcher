@@ -15,7 +15,7 @@ public class ProgressSplashScreen extends SplashScreen {
         progressBar.setFont(new Font("Arial", Font.PLAIN, 11));
         progressBar.setMaximum(100);
         progressBar.setBounds(0, icon.getIconHeight(), icon.getIconWidth(), 20);
-        progressBar.setString("Downloading launcher updates...");
+        progressBar.setString("Baixando atualização do launcher...");
         getContentPane().add(progressBar);
         setVisible(true);
     }

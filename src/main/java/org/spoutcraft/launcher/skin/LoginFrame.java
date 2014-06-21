@@ -95,7 +95,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         LauncherFrame.setIcon(platformImage, "platform_logo.png", 305, 56);
         platformImage.setBounds(21, 21, 305, 56);
 
-        instructionText = new JLabel("Please login using your Minecraft account");
+        instructionText = new JLabel("Por favor faça login com sua conta do Minecraft");
         instructionText.setFont(smallFont);
         instructionText.setBounds(28, 80, FRAME_WIDTH - 50, 30);
         instructionText.setForeground(Color.white);
@@ -129,7 +129,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         name.setFont(largeFont);
         name.addKeyListener(this);
 
-        passLabel = new JLabel("Password");
+        passLabel = new JLabel("Senha");
         passLabel.setFont(largeFont);
         passLabel.setBounds(25, 175, FRAME_WIDTH - 60, 30);
         passLabel.setForeground(Color.white);
@@ -144,7 +144,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         pass.setActionCommand(LOGIN_ACTION);
 
         // "Remember this account"
-        rememberAccount = new JCheckBox("Remember this account", false);
+        rememberAccount = new JCheckBox("Lembrar esta conta", false);
         rememberAccount.setFont(smallFont);
         rememberAccount.setForeground(Color.white);
         rememberAccount.setOpaque(false);
@@ -170,14 +170,14 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         dash.setBounds((FRAME_WIDTH / 2) - 2, 375, 20, 20);
 
         //Terms of Service
-        tosLink = new HyperlinkJLabel("Terms of Service", "http://www.technicpack.net/terms");
+        tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
         tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 20);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
-        privacyPolicy = new HyperlinkJLabel("Privacy Policy", "http://www.technicpack.net/privacy");
+        privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
         privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 20);

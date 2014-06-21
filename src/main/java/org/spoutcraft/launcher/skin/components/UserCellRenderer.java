@@ -64,7 +64,7 @@ public class UserCellRenderer extends JLabel implements ListCellRenderer, ISkinL
                 this.setIcon(head);
             }
         } else if (value == null) {
-            this.setText("Add New User");
+            this.setText("Adicionar novo Usuario");
             this.setIconTextGap(8);
 
             if (addUserIcon != null) {

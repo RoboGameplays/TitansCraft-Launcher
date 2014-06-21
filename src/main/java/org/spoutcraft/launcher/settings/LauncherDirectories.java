@@ -97,7 +97,7 @@ public class LauncherDirectories extends Directories {
             if (changeInst == JFileChooser.APPROVE_OPTION) {
                 workDir = fileChooser.getSelectedFile();
                 if (!ZipUtils.checkLaunchDirectory(workDir)) {
-                    JOptionPane.showMessageDialog(splash, "Please select an empty directory, or your default install folder with settings.yml in it.", "Invalid Location", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(splash, "Por favor selecione uma pasta vazia, ou use o padrão.", "Localização Invalida", JOptionPane.WARNING_MESSAGE);
                     return selectInstallDir(workDir);
                 }
             }

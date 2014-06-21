@@ -9,19 +9,19 @@
     <string>JavaAppLauncher</string>
     
     <key>CFBundleIconFile</key>
-    <string>technic.icns</string>
+    <string>titanscraft.icns</string>
     
     <key>CFBundleIdentifier</key>
     <string>org.spoutcraft.launcher.entrypoint.Start</string>
     
     <key>CFBundleDisplayName</key>
-    <string>Technic</string>
+    <string>TitansCraft</string>
     
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     
     <key>CFBundleName</key>
-    <string>Technic</string>
+    <string>TitansCraft</string>
     
     <key>CFBundlePackageType</key>
     <string>APPL</string>

@@ -60,7 +60,7 @@ public class SpoutcraftLauncher {
 
         int launcherBuild = parseInt(getLauncherBuild(), -1);
         logger.info("------------------------------------------");
-        logger.info("Technic Launcher is starting....");
+        logger.info("Iniciando o Launcher do TitansCraft....");
         logger.info("Launcher Build: " + launcherBuild);
 
         params.logParameters(logger);
@@ -105,7 +105,7 @@ public class SpoutcraftLauncher {
         if (!logDirectory.exists()) {
             logDirectory.mkdir();
         }
-        File logs = new File(logDirectory, "techniclauncher_%D.log");
+        File logs = new File(logDirectory, "titanscraftlauncher_%D.log");
         RotatingFileHandler fileHandler = new RotatingFileHandler(logs.getPath());
 
         fileHandler.setFormatter(new TechnicLogFormatter());
@@ -159,7 +159,7 @@ public class SpoutcraftLauncher {
         OperatingSystem os = OperatingSystem.getOperatingSystem();
         if (os.equals(OperatingSystem.OSX)) {
             System.setProperty("apple.laf.useScreenMenuBar", "true");
-            System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Technic Launcher");
+            System.setProperty("com.apple.mrj.application.apple.menu.about.name", "TitansCraft Launcher");
         }
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

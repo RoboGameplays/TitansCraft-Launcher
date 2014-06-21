@@ -55,7 +55,7 @@ public class ConsoleFrame extends JFrame implements MouseListener {
      * @param killProcess  true to kill the process on console close
      */
     public ConsoleFrame(int numLines, boolean colorEnabled, final Process trackProc, final boolean killProcess) {
-        super("Technic Launcher Console");
+        super("Console");
         this.numLines = numLines;
         this.colorEnabled = colorEnabled;
         this.trackProc = trackProc;
@@ -107,9 +107,9 @@ public class ConsoleFrame extends JFrame implements MouseListener {
             public void run() {
                 try {
                     int code = trackProc.waitFor();
-                    out.println("Process ended with code " + code);
+                    out.println("Processo terminou com código " + code);
                 } catch (InterruptedException e) {
-                    out.println("Process tracking interrupted!");
+                    out.println("Acompanhamento de processos interrompidos!");
                 }
             }
         });
@@ -279,7 +279,7 @@ public class ConsoleFrame extends JFrame implements MouseListener {
         JMenuItem clear;
 
         public ContextMenu() {
-            copy = new JMenuItem("Copy");
+            copy = new JMenuItem("Copiar");
             add(copy);
             copy.addActionListener(new ActionListener() {
                 @Override
@@ -288,7 +288,7 @@ public class ConsoleFrame extends JFrame implements MouseListener {
                 }
             });
 
-            clear = new JMenuItem("Clear");
+            clear = new JMenuItem("Limpar");
             add(clear);
             clear.addActionListener(new ActionListener() {
                 @Override

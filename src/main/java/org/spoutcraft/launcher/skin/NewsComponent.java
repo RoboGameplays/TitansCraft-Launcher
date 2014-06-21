@@ -27,7 +27,7 @@ public class NewsComponent extends JComponent {
             List<Article> articles = RestObject.getRestObject(News.class, PlatformConstants.NEWS).getNews();
             setupArticles(articles);
         } catch (RestfulAPIException e) {
-            Utils.getLogger().log(Level.WARNING, "Unable to load news, hiding news section", e);
+            Utils.getLogger().log(Level.WARNING, "Impossivel carregar noticias, escondendo a seção de noticias", e);
             this.setVisible(false);
             this.setEnabled(false);
         }

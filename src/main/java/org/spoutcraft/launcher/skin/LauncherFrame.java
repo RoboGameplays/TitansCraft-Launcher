@@ -104,7 +104,7 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         RoundedBox launchArea = new RoundedBox(TRANSPARENT);
         launchArea.setBounds(605, 375, 265, 50);
 
-        launch = new LiteButton("PLAY");
+        launch = new LiteButton("JOGAR");
         launch.setFont(getMinecraftFont(20));
         launch.setBounds(launchArea.getX() + 5, launchArea.getY() + 5, launchArea.getWidth() - 10, launchArea.getHeight() - 10);
         launch.setActionCommand(LAUNCH_ACTION);
@@ -185,8 +185,8 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         int linkHeight = (linkArea.getHeight() - (SPACING * 4)) / 3;
 
         // Browse link
-        JButton browse = new ImageHyperlinkButton("http://www.technicpack.net");
-        browse.setToolTipText("Get More Modpacks");
+        JButton browse = new ImageHyperlinkButton("http://www.titanscraft.net");
+        browse.setToolTipText("Ver os nossos Servidores");
         browse.setBounds(linkArea.getX() + SPACING, linkArea.getY() + SPACING, linkWidth, linkHeight);
         browse.setIcon(ResourceUtils.getIcon("platformLinkButton.png"));
         browse.setRolloverIcon(ResourceUtils.getIcon("platformLinkButtonBright.png"));
@@ -194,8 +194,8 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         browse.setBorderPainted(false);
 
         // Forums link
-        JButton forums = new ImageHyperlinkButton("http://forums.technicpack.net/");
-        forums.setToolTipText("Visit the forums");
+        JButton forums = new ImageHyperlinkButton("http://forums.titanscraft.net/");
+        forums.setToolTipText("Visite o forum");
         forums.setBounds(linkArea.getX() + SPACING, browse.getY() + browse.getHeight() + SPACING, linkWidth, linkHeight);
         forums.setIcon(ResourceUtils.getIcon("forumsLinkButton.png"));
         forums.setRolloverIcon(ResourceUtils.getIcon("forumsLinkButtonBright.png"));
@@ -203,8 +203,8 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         forums.setBorderPainted(false);
 
         // Donate link
-        JButton donate = new ImageHyperlinkButton("http://www.technicpack.net/donate/");
-        donate.setToolTipText("Donate to the modders");
+        JButton donate = new ImageHyperlinkButton("http://www.titanscraft.net/doar/");
+        donate.setToolTipText("Doações em breve");
         donate.setBounds(linkArea.getX() + SPACING, forums.getY() + forums.getHeight() + SPACING, linkWidth, linkHeight);
         donate.setIcon(ResourceUtils.getIcon("donateLinkButton.png"));
         donate.setRolloverIcon(ResourceUtils.getIcon("donateLinkButtonBright.png"));
@@ -225,7 +225,7 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         packOptionsBtn.addActionListener(this);
 
         // Platform website button
-        platform = new ImageHyperlinkButton("http://www.technicpack.net/");
+        platform = new ImageHyperlinkButton("http://www.titanscraft.net/");
         platform.setIcon(ResourceUtils.getIcon("openPlatformPage.png", 20, 20));
         platform.setBounds(50, FRAME_HEIGHT / 2 + 56, 20, 20);
 
@@ -240,9 +240,10 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         exit.setBounds(FRAME_WIDTH - 34, 6, 28, 28);
         exit.setActionCommand(EXIT_ACTION);
         exit.addActionListener(this);
-
+        
+        //Tirar depois
         // Steam button
-        JButton steam = new ImageHyperlinkButton("http://steamcommunity.com/groups/technic-pack");
+        /*JButton steam = new ImageHyperlinkButton("http://steamcommunity.com/groups/technic-pack");
         steam.setRolloverIcon(ResourceUtils.getIcon("steamInverted.png", 28, 28));
         steam.setToolTipText("Game with us on Steam");
         steam.setBounds(215 + 6, 6, 28, 28);
@@ -267,7 +268,7 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         youtube.setRolloverIcon(ResourceUtils.getIcon("youtubeInverted.png", 28, 28));
         youtube.setToolTipText("Subscribe to our videos");
         youtube.setBounds(215 + 6 + 34, 6, 28, 28);
-        setIcon(youtube, "youtube.png", 28);
+        setIcon(youtube, "youtube.png", 28);*/
 
         Container contentPane = getContentPane();
         contentPane.setLayout(null);
@@ -369,13 +370,13 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
                 launcherOptions.setVisible(true);
             }
         } else if (action.equals(PACK_REMOVE_ACTION)) {
-            int result = JOptionPane.showConfirmDialog(this, "Are you sure you want to remove this pack?\n This will delete all files in: " + getSelector().getSelectedPack().getInstalledDirectory(), "Remove Pack", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            int result = JOptionPane.showConfirmDialog(this, "Você tem certeza que deseja remover este modpack?\n Isto irá apagar todos os arquivos em: " + getSelector().getSelectedPack().getInstalledDirectory(), "Remover", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
             if (result == JOptionPane.YES_OPTION) {
                 getSelector().removePack();
             }
         } else if (action.equals(PACK_OPTIONS_ACTION)) {
             if (getSelector().getSelectedPack().getInfo() != null && (packOptions == null || !packOptions.isVisible())) {
-                System.out.println("Opening options for " + getSelector().getSelectedPack());
+                System.out.println("Abrir opções de " + getSelector().getSelectedPack());
                 packOptions = new ModpackOptions(getSelector().getSelectedPack(), mPackList);
                 packOptions.setModal(true);
                 packOptions.setVisible(true);
@@ -440,11 +441,11 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
     public void lockLoginButton(boolean unlock) {
         if (unlock) {
             if (currentUser != null && currentUser.isOffline())
-                launch.setText("PLAY OFFLINE");
+                launch.setText("JOGAR OFFLINE");
             else
-                launch.setText("PLAY");
+                launch.setText("JOGAR");
         } else {
-            launch.setText("LAUNCHING...");
+            launch.setText("INICIANDO...");
         }
         launch.setEnabled(unlock);
         packRemoveBtn.setEnabled(unlock);
@@ -477,9 +478,9 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         }
 
         if (currentUser.isOffline())
-            launch.setText("PLAY OFFLINE");
+            launch.setText("JOGAR OFFLINE");
         else {
-            launch.setText("PLAY");
+            launch.setText("JOGAR");
             mUserModel.setLastUser(currentUser);
 
 //			if (mDonorSite.doesUserQualify(1, currentUser.getProfile().getName(), 5))
