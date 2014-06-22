@@ -167,20 +167,20 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         dash = new JLabel("-");
         dash.setFont(verySmallFont);
         dash.setForeground(Color.white);
-        dash.setBounds((FRAME_WIDTH / 2) - 2, 375, 30, 30);
+        dash.setBounds((FRAME_WIDTH / 2) - 2, 375, 20, 20);
 
         //Terms of Service
         tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
-        tosLink.setBounds(dash.getX() - 140, dash.getY(), 140, 20);
+        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 25);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
         privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
-        privacyPolicy.setBounds(dash.getX() - 8, dash.getY(), 80, 20);
+        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 25);
         privacyPolicy.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Close button
@@ -246,12 +246,12 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
      */
      //remover o que estiver dentro das aspas se não caber no frame
     private void clearCurrentUser() {
-        pass.setText("Digite sua senha aqui");
+        pass.setText("");
         pass.setEditable(true);
         pass.setBackground(Color.white);
         rememberAccount.setSelected(false);
 
-        name.setText("Digite seu Username aqui");
+        name.setText("");
         nameSelect.setSelectedItem("");
     }
 
