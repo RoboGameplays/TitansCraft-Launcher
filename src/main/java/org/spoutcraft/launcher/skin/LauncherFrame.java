@@ -125,7 +125,7 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         loggedInMsg.setBounds(userArea.getX() + 5, userArea.getY() + 8, 185, 30);
         loggedInMsg.setForeground(Color.white);
 
-        logout = new LiteButton("Log Out", new Color(0, 0, 0, 0), new Color(0, 0, 0, 0), new Color(0, 0, 0, 0), Color.white, Color.white, Color.white);
+        logout = new LiteButton("Sair", new Color(0, 0, 0, 0), new Color(0, 0, 0, 0), new Color(0, 0, 0, 0), Color.white, Color.white, Color.white);
         logout.setFont(minecraft);
         logout.setOpaque(false);
         logout.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -136,11 +136,11 @@ public class LauncherFrame extends JFrame implements ActionListener, KeyListener
         logout.setActionCommand(LOGOUT);
         logout.addActionListener(this);
 
-        // Technic logo
+        // TitansCraft logo
         JLabel logo = new JLabel();
         ImageIcon logoIcon = new ImageIcon(ImageUtils.scaleWithAspectWidth(ResourceUtils.getImage("header.png"), 275));
         logo.setIcon(logoIcon);
-        logo.setBounds(600, 6, logoIcon.getIconWidth(), logoIcon.getIconHeight());
+        logo.setBounds(275, 3, logoIcon.getIconWidth(), logoIcon.getIconHeight());
 
         // Pack Selector Background
         JLabel selectorBackground = new JLabel();
