@@ -48,8 +48,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
     private SkinRepository mSkinRepo;
     private UserModel mUserModel;
 
-    private static final int FRAME_WIDTH = 347;
-    private static final int FRAME_HEIGHT = 411;
+    private static final int FRAME_WIDTH = 450;
+    private static final int FRAME_HEIGHT = 520;
 
     private static final String CLOSE_ACTION = "close";
     private static final String LOGIN_ACTION = "login";
@@ -144,7 +144,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         pass.setActionCommand(LOGIN_ACTION);
 
         // "Remember this account"
-        rememberAccount = new JCheckBox("Lembre esta conta", true);
+        rememberAccount = new JCheckBox("Lembrar esta conta", true);
         rememberAccount.setFont(smallFont);
         rememberAccount.setForeground(Color.white);
         rememberAccount.setOpaque(false);
@@ -173,14 +173,14 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
-        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 25);
+        tosLink.setBounds(dash.getX() - 105, dash.getY(), 105, 20);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
         privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
-        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 25);
+        privacyPolicy.setBounds(dash.getX() + 10, dash.getY(), 85, 20);
         privacyPolicy.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Close button
@@ -246,12 +246,12 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
      */
      //remover o que estiver dentro das aspas se não caber no frame
     private void clearCurrentUser() {
-        pass.setText("");
+        pass.setText("Digite sua senha aqui");
         pass.setEditable(true);
         pass.setBackground(Color.white);
         rememberAccount.setSelected(false);
 
-        name.setText("");
+        name.setText("Digite seu Username aqui");
         nameSelect.setSelectedItem("");
     }
 

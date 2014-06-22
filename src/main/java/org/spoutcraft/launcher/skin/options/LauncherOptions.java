@@ -98,7 +98,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
 
         ButtonGroup group = new ButtonGroup();
 
-        stable = new JRadioButton("Sempre usar a versão estavel do launcher");
+        stable = new JRadioButton("Usar a versão Estavel");
         stable.setBounds(10, build.getY() + build.getHeight() + 10, FRAME_WIDTH - 20, 20);
         stable.setFont(minecraft);
         stable.setForeground(Color.WHITE);
@@ -110,7 +110,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         stable.addActionListener(this);
         group.add(stable);
 
-        beta = new JRadioButton("Sempre usar a versão Beta do launcher");
+        beta = new JRadioButton("Usar a versão Beta");
         beta.setBounds(10, stable.getY() + stable.getHeight() + 10, FRAME_WIDTH - 20, 20);
         beta.setFont(minecraft);
         beta.setForeground(Color.WHITE);
