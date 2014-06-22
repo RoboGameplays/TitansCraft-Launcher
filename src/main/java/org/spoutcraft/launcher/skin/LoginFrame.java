@@ -246,12 +246,12 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
      */
      //remover o que estiver dentro das aspas se não caber no frame
     private void clearCurrentUser() {
-        pass.setText("Digite sua senha aqui");
+        pass.setText("");
         pass.setEditable(true);
         pass.setBackground(Color.white);
         rememberAccount.setSelected(true);
 
-        name.setText("Digite seu Username aqui");
+        name.setText("");
         nameSelect.setSelectedItem("");
     }
 
