@@ -48,8 +48,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
     private SkinRepository mSkinRepo;
     private UserModel mUserModel;
 
-    private static final int FRAME_WIDTH = 450;
-    private static final int FRAME_HEIGHT = 520;
+    private static final int FRAME_WIDTH = 347;
+    private static final int FRAME_HEIGHT = 411;
 
     private static final String CLOSE_ACTION = "close";
     private static final String LOGIN_ACTION = "login";
@@ -92,8 +92,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
 
         //Logo at the top
         platformImage = new JLabel();
-        LauncherFrame.setIcon(platformImage, "platform_logo.png", 350, 56);
-        platformImage.setBounds(21, 21, 350, 56);
+        LauncherFrame.setIcon(platformImage, "platform_logo.png", 305, 56);
+        platformImage.setBounds(21, 21, 305, 56);
 
         instructionText = new JLabel("Faça login com sua conta do Minecraft");
         instructionText.setFont(smallFont);
@@ -112,7 +112,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
             nameSelect.setUI(new MetalComboBoxUI());
         }
 
-        nameSelect.setBounds(25, 140, 305, 32);
+        nameSelect.setBounds(25, 140, 297, 32);
         nameSelect.setFont(largeFont);
         nameSelect.setEditable(true);
         nameSelect.setVisible(false);
@@ -125,7 +125,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         nameSelect.setActionCommand(CHANGE_USER);
 
         name = new JTextField();
-        name.setBounds(25, 140, 305, 30);
+        name.setBounds(25, 140, 297, 30);
         name.setFont(largeFont);
         name.addKeyListener(this);
 
@@ -136,7 +136,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
 
         // Setup password box
         pass = new JPasswordField();
-        pass.setBounds(25, 205, 305, 30);
+        pass.setBounds(25, 205, 297, 30);
         pass.setFont(largeFont);
         pass.addKeyListener(this);
         pass.setEchoChar('*');
@@ -144,11 +144,11 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         pass.setActionCommand(LOGIN_ACTION);
 
         // "Remember this account"
-        rememberAccount = new JCheckBox("Lembre esta conta", false);
+        rememberAccount = new JCheckBox("Lembre esta conta", true);
         rememberAccount.setFont(smallFont);
         rememberAccount.setForeground(Color.white);
         rememberAccount.setOpaque(false);
-        rememberAccount.setBounds(25, 245, 342, 30);
+        rememberAccount.setBounds(25, 245, 300, 30);
         rememberAccount.setHorizontalTextPosition(SwingConstants.LEFT);
         rememberAccount.setHorizontalAlignment(SwingConstants.RIGHT);
         rememberAccount.setIconTextGap(12);
@@ -173,14 +173,14 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         tosLink = new HyperlinkJLabel("Termos de serviço", "indisponivel");
         tosLink.setFont(verySmallFont);
         tosLink.setForeground(Color.white);
-        tosLink.setBounds(dash.getX() - 140, dash.getY(), 140, 30);
+        tosLink.setBounds(dash.getX() - 140, dash.getY(), 140, 20);
         tosLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Privacy Policy
         privacyPolicy = new HyperlinkJLabel("Politica de Privacidade", "indisponivel");
         privacyPolicy.setFont(verySmallFont);
         privacyPolicy.setForeground(Color.white);
-        privacyPolicy.setBounds(dash.getX() - 8, dash.getY(), 80, 30);
+        privacyPolicy.setBounds(dash.getX() - 8, dash.getY(), 80, 20);
         privacyPolicy.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         //Close button
@@ -244,13 +244,14 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
     /**
      * Preps the UI to enter a brand new user.
      */
+     //remover o que estiver dentro das aspas se não caber no frame
     private void clearCurrentUser() {
-        pass.setText("");
+        pass.setText("Digite sua senha aqui");
         pass.setEditable(true);
         pass.setBackground(Color.white);
         rememberAccount.setSelected(false);
 
-        name.setText("");
+        name.setText("Digite seu Username aqui");
         nameSelect.setSelectedItem("");
     }
 
