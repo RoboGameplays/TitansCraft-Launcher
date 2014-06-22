@@ -5,7 +5,7 @@
 	<!-- Project information -->
 	<name>TitansCraft Launcher</name>
 	<groupId>org.spoutcraft</groupId>
-	<artifactId>titanscraft-launcher</artifactId>
+	<artifactId>launcher</artifactId>
 	<version>1.0-${buildNumber}</version>
 	<url>http://www.titanscraft.net</url>
 	<inceptionYear>2014</inceptionYear>
