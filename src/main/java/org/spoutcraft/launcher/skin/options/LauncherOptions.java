@@ -177,7 +177,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
         save.addActionListener(this);
 
         consoleToggle = Settings.getShowConsole();
-        console = new LiteButton(consoleToggle ? "Esconder Console" : "Exiber Console");
+        console = new LiteButton(consoleToggle ? "Esconder Console" : "Exibir Console");
         console.setFont(minecraft.deriveFont(14F));
         console.setBounds(10, logs.getY() + logs.getHeight() + 10, FRAME_WIDTH / 2 - 15, 25);
         console.setForeground(Color.WHITE);
@@ -297,7 +297,7 @@ public class LauncherOptions extends JDialog implements ActionListener, MouseLis
             }
 
             if (directoryChanged || streamChanged) {
-                JOptionPane.showMessageDialog(c, "A manual restart is required for changes to take effect. Please exit and restart your launcher.", "Restart Required", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(c, "Um reinício manual é necessária para que as alterações tenham efeito. Feche e reinicie o seu launcher.", "Reinicio requerido", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
             }
             dispose();
