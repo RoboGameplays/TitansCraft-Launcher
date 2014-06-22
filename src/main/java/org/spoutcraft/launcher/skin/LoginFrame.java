@@ -249,7 +249,7 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
         pass.setText("Digite sua senha aqui");
         pass.setEditable(true);
         pass.setBackground(Color.white);
-        rememberAccount.setSelected(false);
+        rememberAccount.setSelected(true);
 
         name.setText("Digite seu Username aqui");
         nameSelect.setSelectedItem("");
