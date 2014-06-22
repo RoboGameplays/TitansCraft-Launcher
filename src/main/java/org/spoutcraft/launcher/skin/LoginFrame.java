@@ -48,8 +48,8 @@ public class LoginFrame extends JFrame implements KeyListener, ActionListener, M
     private SkinRepository mSkinRepo;
     private UserModel mUserModel;
 
-    private static final int FRAME_WIDTH = 450;
-    private static final int FRAME_HEIGHT = 520;
+    private static final int FRAME_WIDTH = 347;
+    private static final int FRAME_HEIGHT = 411;
 
     private static final String CLOSE_ACTION = "close";
     private static final String LOGIN_ACTION = "login";
