@@ -41,7 +41,7 @@ public class Launcher {
         userModel = new UserModel(Users.load());
 
         mirrorStore = new MirrorStore(userModel);
-        mirrorStore.addSecureMirror("titanscraft.net", new JsonWebSecureMirror("http://titanscraft.net/", "titanscraft.net"));
+        mirrorStore.addSecureMirror("titanscraft.net/storage/modpack", new JsonWebSecureMirror("http://titanscraft.net/storage/modpack/", "titanscraft.net/storage/modpack"));
 
         SkinRepository skinRepo = new SkinRepository(new TechnicSkinMapper(), new MinotarSkinStore("https://minotar.net/", mirrorStore));
 
@@ -53,7 +53,7 @@ public class Launcher {
         AvailablePackList packList = new AvailablePackList(installedPacks, mirrorStore);
         userModel.addAuthListener(packList);
 
-        DonorSite donors = new DonorSite("http://doar.titanscraft.net/");
+        DonorSite donors = new DonorSite("http://www.titanscraft.net/doar");
 
         this.launcherFrame = new LauncherFrame(skinRepo, userModel, packList, donors, mirrorStore);
         this.loginFrame = new LoginFrame(skinRepo, userModel);
